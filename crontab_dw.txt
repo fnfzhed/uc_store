@@ -1,0 +1,5 @@
+# Jadwal Lab 10 (versi macOS). Pasang dengan: crontab crontab_dw.txt   (hapus: crontab -r)
+PGPASSFILE=/Users/fnfauziah/Downloads/dw-lab/.pgpass
+0 1 * * * /Users/fnfauziah/Downloads/dw-lab/venv/bin/python /Users/fnfauziah/Downloads/dw-lab/etl.py >> /Users/fnfauziah/Downloads/dw-lab/logs/etl.log 2>&1
+30 1 * * * /opt/homebrew/opt/postgresql@18/bin/pg_dump -h localhost -U etl_user -Fc toko_dw > /Users/fnfauziah/Downloads/dw-lab/backup/toko_dw_$(date +\%F).dump
+0 2 * * * find /Users/fnfauziah/Downloads/dw-lab/backup -name '*.dump' -mtime +7 -delete

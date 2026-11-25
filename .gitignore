@@ -1,0 +1,15 @@
+# lingkungan lokal
+venv/
+__pycache__/
+.DS_Store
+
+# rahasia dan hasil runtime
+.pgpass
+backup/
+metabase-data/
+logs/*
+!logs/hasil_analitik_Q1-Q8.txt
+
+# materi kelas (bukan buatan sendiri)
+Modul_Praktik_Data_Warehouse.pdf
+Dataset_Dashboard_MDM.xlsx

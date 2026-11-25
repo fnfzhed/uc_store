@@ -1,0 +1,5 @@
+CREATE ROLE etl_user WITH LOGIN PASSWORD 'EtlPass123';
+CREATE ROLE bi_user WITH LOGIN PASSWORD 'BiPass123';
+CREATE DATABASE toko_oltp OWNER etl_user;
+CREATE DATABASE toko_crm OWNER etl_user;
+CREATE DATABASE toko_dw OWNER etl_user;
